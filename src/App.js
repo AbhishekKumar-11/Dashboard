@@ -7,11 +7,16 @@ import {Navbar , Footer , Sidebar , ThemeSettings, LineChart } from './component
 
 import {Ecommerce , Calendar , Employees ,Stacked,Pyramid , Customers,Kanban , Area , Bar , Pie ,Financial , ColorMapping , ColorPicker ,Editor ,Orders, Line } from './pages' ; 
 import './App.css'
+import { useStateContext } from './context/ContextProvider';
 
 
 const App = () => {
-  const activeMenu = true ;
+ 
+   const {activeMenu } = useStateContext() ;
+  
+  
   return (
+   
     <div>
       <BrowserRouter>
       <div className=' flex relative dark:bg-main-bg '>
@@ -31,7 +36,7 @@ const App = () => {
        )}
        <div className={
         `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 
-        ' md:ml-72' 
+        ' md:ml-72 ' 
         :
          'flex-2'}`
         }>
@@ -71,6 +76,7 @@ const App = () => {
       </div>
       </BrowserRouter>
     </div>
+   
   )
 }
 

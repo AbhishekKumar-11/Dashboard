@@ -46,7 +46,7 @@ const Sidebar = () => {
             <NavLink 
             to={`${link.name}`}
             key={link.name}
-            onClick={()=>{}}
+            onClick={handleCloseSidebar}
             className={(isActive)=> isActive ? activeLink :normalLink }
             >
               {link.icon}

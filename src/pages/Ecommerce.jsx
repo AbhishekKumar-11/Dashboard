@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
-import { GoPrimitiveDot } from 'react-icons/go';
+import { GoHubot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
@@ -12,7 +12,7 @@ import product9 from '../data/product9.jpg';
  
 const Ecommerce = () => {
   return (
-    <div className='mt-24'>
+    <div className='-mt-[28px]'>
     <div className='flex flex-wrap lg:flex-nowrap justify-center'>
       <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
        <div className='flex justify-between items-center'>
@@ -58,9 +58,63 @@ const Ecommerce = () => {
           ))}
    </div>
    </div>
-  
+     <div className='flex gap-10 flex-wrap justify-center'>
+       <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780 '>
+      <div className ='flex justify-between '>
+          <p className='font-semibold text-xl '>Revenue updates</p>
+          <div className='flex items-center gap-4 '>
+        <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl '> 
+          <span> 
+          <GoHubot />
+          </span> 
+          <span>Expense</span>
+         </p>
+         <p className='flex items-center gap-2 text-green-400 hover:drop-shadow-xl '> 
+          <span> 
+          <GoHubot />
+          </span> 
+          <span>Budget</span>
+         </p>
+          </div>
+      </div>
+      <div className='mt-10 flex gap-10 flex-wrap justify-center'>
+       <div className='border-r-1 border-color m-4 pr-10 '>
+        <div className=''>
+         <p> <span className='text-3xl font-semibold '>$93,438</span> <span className='p-1.5 text-white hover:drop-shadow-xl cursor-pointer rounded-full bg-green-400 ml-3 text-xs'>23% </span> </p>
+         <p className='text-gray-500 mt-1'>
+          budget
+         </p>
+        </div>
+        <div className='mt-8'>
+         <p> <span className='text-3xl font-semibold '>$48,438</span>  </p>
+         <p className='text-gray-500 mt-1'>
+          Expense
+         </p>
+        </div>
+        <div className='mt-5'>
+        <SparkLine  id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData}  />
+        </div>
+        <div className='mt-10 '>
+            <Button
+            color='white'
+            bgcolor='blue' 
+            text='Download report'
+            borderRadius='10px'
+            />
+        </div>
+       </div>
+       <div>
+        <Stacked
+        width='320px'
+        height='360px'
+
+        />
+       </div>
+      </div>
+       </div>
+     </div>
   </div>
   )
 }
 
-export default Ecommerce ;
+export default Ecommerce;

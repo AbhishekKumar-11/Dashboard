@@ -7,10 +7,12 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';  
-import product9 from '../data/product9.jpg';
+
 
  
 const Ecommerce = () => {
+
+   
   return (
     <div className='mt-12'>
     <div className='flex flex-wrap lg:flex-nowrap justify-center'>
